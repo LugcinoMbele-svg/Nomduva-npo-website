@@ -31,7 +31,7 @@ Nomduva-npo-website/
 ## 🚀 Getting Started
 
 ### Option 1: View Online (Easiest)
-1. Go to GitHub Pages settings in your repository
+1. Go to Settings → Pages in your repository
 2. Enable GitHub Pages on the main branch
 3. Your website will be live at: `https://lugcinombele-svg.github.io/Nomduva-npo-website/`
 
@@ -177,10 +177,12 @@ To make the contact form send emails, you can use:
 
 ## 🌐 Deploy Your Website
 
-### Option 1: GitHub Pages (Free & Easy)
-1. Go to Settings → Pages
-2. Select "main" branch
-3. Your site will be live in minutes
+### Option 1: GitHub Pages (Free & Easy) ⭐ RECOMMENDED
+1. Go to your repository Settings
+2. Scroll to "Pages" section
+3. Select "main" branch
+4. Your site will be live in 1-2 minutes!
+5. Visit: `https://lugcinombele-svg.github.io/Nomduva-npo-website/`
 
 ### Option 2: Netlify (Free)
 1. Go to netlify.com
