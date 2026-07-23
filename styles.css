@@ -16,6 +16,7 @@
     --border-color: #E9ECEF;
     --white: #FFFFFF;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -204,6 +205,7 @@ section h2 {
     font-size: 18px;
     color: var(--text-light);
     margin-bottom: 40px !important;
+    text-align: center;
 }
 
 /* About Section */
@@ -341,6 +343,135 @@ section h2 {
     color: var(--text-light);
     padding: 0 20px 20px;
     line-height: 1.6;
+}
+
+/* Founders/Leadership Section */
+.founders {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #FFFFFF 100%);
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.founder-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s ease;
+    border: 1px solid var(--border-color);
+    animation: fadeInUp 0.6s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 86, 179, 0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.founder-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.founder-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.founder-card:hover .founder-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.founder-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.8), rgba(244, 180, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.founder-card:hover .founder-overlay {
+    opacity: 1;
+}
+
+.founder-social {
+    display: flex;
+    gap: 20px;
+}
+
+.founder-social a {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.founder-social a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: scale(1.15);
+}
+
+.founder-details {
+    padding: 40px;
+}
+
+.founder-details h3 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.founder-role {
+    font-size: 16px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.founder-bio {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.founder-bio:last-child {
+    margin-bottom: 0;
 }
 
 /* CTA Section */
@@ -579,6 +710,19 @@ section h2 {
     .footer-content {
         gap: 30px;
     }
+
+    .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .founder-details {
+        padding: 30px;
+    }
+
+    .founder-details h3 {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -621,6 +765,30 @@ section h2 {
 
     .btn {
         padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .founder-card {
+        margin: 0;
+    }
+
+    .founder-image-wrapper {
+        height: 300px;
+    }
+
+    .founder-details {
+        padding: 20px;
+    }
+
+    .founder-details h3 {
+        font-size: 22px;
+    }
+
+    .founder-role {
+        font-size: 14px;
+    }
+
+    .founder-bio {
         font-size: 14px;
     }
 }
