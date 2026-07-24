@@ -176,3 +176,20 @@ if (statsSection) {
 }
 
 console.log('Nomduva Website - All scripts loaded successfully');
+// iKhaya Slider
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+
+if(slides){
+  const totalSlides = slides.children.length;
+  
+  document.querySelector('.next').addEventListener('click', () => {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+  });
+  
+  document.querySelector('.prev').addEventListener('click', () => {
+    slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+  });
+}
