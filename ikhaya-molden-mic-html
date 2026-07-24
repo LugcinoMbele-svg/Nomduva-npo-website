@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iKhaya Golden Mic | NCEP NOMDUVA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">NCEP NOMDUVA</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="ikhaya-golden-mic.html" class="active">iKhaya Golden Mic</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h2>iKhaya Golden Mic Program</h2>
+    <p>Connecting Young Talent to Industry Opportunity</p>
+  </section>
+
+  <section class="container program-about">
+    <h3>About the Program</h3>
+    <p>The iKhaya Golden Mic Program is NCEP NOMDUVA’s platform for young creatives in acting, writing, and music. Our mission is to identify, develop, and connect South African youth talent with real opportunities in the entertainment and creative industries.</p>
+    <p>Through mentorship, workshops, and industry showcases, we equip participants with professional skills, confidence, and networks.</p>
+    <p><strong>Vision:</strong> To build the next generation of South African stars who tell our stories and shape our culture.</p>
+  </section>
+
+  <section class="container">
+    <h3>Program Highlights</h3>
+    <div class="slider">
+      <div class="slides">
+        <img src="https://via.placeholder.com/800x500" alt="Workshop 1">
+        <img src="https://via.placeholder.com/800x500" alt="Talent Showcase">
+        <img src="https://via.placeholder.com/800x500" alt="Mentorship Session">
+        <img src="https://via.placeholder.com/800x500" alt="Music Recording">
+        <img src="https://via.placeholder.com/800x500" alt="Acting Class">
+        <img src="https://via.placeholder.com/800x500" alt="Writing Workshop">
+        <img src="https://via.placeholder.com/800x500" alt="Industry Panel">
+        <img src="https://via.placeholder.com/800x500" alt="Performance Night">
+      </div>
+      <button class="prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h3>Are you a young creative?</h3>
+    <p>Join the iKhaya Golden Mic Program and take your talent to the next level.</p>
+    <a href="index.html#contact" class="btn">Get Involved</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NCEP NOMDUVA. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
