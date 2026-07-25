@@ -55,6 +55,7 @@ body {
     padding: 1rem 1.5rem;
 }
 
+./* Logo & Brand Styling Fix */
 .logo {
     display: flex;
     align-items: center;
@@ -64,21 +65,27 @@ body {
 }
 
 .logo-img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 45px;            /* Controls width */
+    height: 45px;           /* Controls height */
+    max-width: 45px;        /* Prevents expansion */
+    max-height: 45px;       /* Prevents expansion */
+    border-radius: 50%;     /* Keeps circular shape */
+    object-fit: cover;      /* Prevents stretching/distortion */
+    flex-shrink: 0;         /* Ensures logo size stays fixed on smaller screens */
 }
 
 .logo-text h1 {
-    font-size: 1.2rem;
-    line-height: 1.1;
+    font-size: 1.15rem;     /* Slightly scaled down for clean proportion */
+    line-height: 1.2;
+    margin: 0;
 }
 
 .logo-text p {
     font-size: 0.75rem;
-    opacity: 0.8;
+    opacity: 0.85;
+    margin: 0;
 }
+
 
 .nav-links {
     display: flex;
