@@ -105,31 +105,31 @@
         <h2 class="section-title">Audition & Registration</h2>
         <p class="section-subtitle">Are you an aspiring artist? Apply to join our next developmental cohort.</p>
         
-        <div class="contact-wrapper">
-            <form class="contact-form" id="ikhayaForm">
-                <h3>Artist Registration Form</h3>
-                <div class="form-group">
-                    <label for="artist-name">Full Name / Artist Name</label>
-                    <input type="text" id="artist-name" placeholder="e.g. Sipho Dlamini (Sipho Keys)" required>
-                </div>
-                <div class="form-group">
-                    <label for="artist-email">Email Address</label>
-                    <input type="email" id="artist-email" placeholder="Your Email Address" required>
-                </div>
-                <div class="form-group">
-                    <label for="artist-phone">Phone / WhatsApp Number</label>
-                    <input type="tel" id="artist-phone" placeholder="e.g. +27 71 000 0000" required>
-                </div>
-                <div class="form-group">
-                    <label for="talent-category">Primary Category</label>
-                    <input type="text" id="talent-category" placeholder="e.g. Vocalist, Poet, Actor, Producer, Rapper" required>
-                </div>
-                <div class="form-group">
-                    <label for="artist-bio">Brief Introduction / Demo Link</label>
-                    <textarea id="artist-bio" placeholder="Tell us about your background or share a link to your performance video/audio..." rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
-            </form>
+        <form class="contact-form" id="ikhayaForm" action="https://formspree.io/f/YOUR_IKHAYA_FORM_ID" method="POST">
+    <h3>Artist Registration Form</h3>
+    <div class="form-group">
+        <label for="artist-name">Full Name / Artist Name</label>
+        <input type="text" id="artist-name" name="artist_name" placeholder="e.g. Sipho Dlamini (Sipho Keys)" required>
+    </div>
+    <div class="form-group">
+        <label for="artist-email">Email Address</label>
+        <input type="email" id="artist-email" name="email" placeholder="Your Email Address" required>
+    </div>
+    <div class="form-group">
+        <label for="artist-phone">Phone / WhatsApp Number</label>
+        <input type="tel" id="artist-phone" name="phone_number" placeholder="e.g. +27 71 000 0000" required>
+    </div>
+    <div class="form-group">
+        <label for="talent-category">Primary Category</label>
+        <input type="text" id="talent-category" name="category" placeholder="e.g. Vocalist, Poet, Actor, Producer, Rapper" required>
+    </div>
+    <div class="form-group">
+        <label for="artist-bio">Brief Introduction / Demo Link</label>
+        <textarea id="artist-bio" name="artist_bio" placeholder="Tell us about your background or share a link to your performance video/audio..." rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" id="ikhayaSubmitBtn">Submit Application</button>
+        </form>
+        
         </div>
     </section>
 
