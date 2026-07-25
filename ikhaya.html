@@ -3,345 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iKhaya Golden Mic 2026 | Nomduva NCEP</title>
-    <style>
-        :root {
-            --primary: #1e3a8a;
-            --accent: #d97706;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --text: #334155;
-            --border: #e2e8f0;
-            --radius: 12px;
-        }
-
-          {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            color: var(--text);
-            background-color: var(--light);
-            line-height: 1.6;
-        }
-
-        /* Hero Banner */
-        .program-hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 58, 138, 0.85) 100%), 
-                        url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80') center/cover;
-            color: #ffffff;
-            padding: 5rem 1.5rem;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            padding: 0.35rem 1rem;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .program-hero h1 {
-            font-size: 2.75rem;
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-        }
-
-        .program-hero p {
-            font-size: 1.25rem;
-            max-width: 650px;
-            margin: 0 auto 2rem;
-            color: #cbd5e1;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.75rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: #ffffff;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Section Wrappers */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            color: #64748b;
-        }
-
-        /* Offerings Grid */
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            padding: 1.75rem;
-            border-radius: var(--radius);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Program Timeline Table */
-        .timeline-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #ffffff;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .timeline-table th, 
-        .timeline-table td {
-            padding: 1.2rem 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .timeline-table th {
-            background: var(--primary);
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .timeline-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Eligibility & Requirements */
-        .eligibility-box {
-            background: #ffffff;
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
-            border-radius: var(--radius);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .eligibility-list {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        .eligibility-list li {
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .eligibility-list li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Contact & Venue */
-        .contact-card {
-            background: var(--dark);
-            color: #ffffff;
-            border-radius: var(--radius);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .contact-card h2 {
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .contact-details {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            color: #cbd5e1;
-        }
-
-        .contact-details a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .program-hero h1 { font-size: 2rem; }
-            .timeline-table th, .timeline-table td { padding: 0.8rem; font-size: 0.9rem; }
-        }
-    </style>
+    <meta name="description" content="iKhaya Golden Mic Initiative by Nomduva NCEP - Discovering, mentoring, and promoting youth talent in music, performance, and creative arts across KwaZulu-Natal.">
+    <title>iKhaya Golden Mic - Nomduva NCEP</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="program-hero">
-        <span class="hero-badge">Nomduva NCEP Initiative</span>
-        <h1>iKhaya Golden Mic 2026</h1>
-        <p>"Your Voice, Your Stage, Your Future."</p>
-        <div class="hero-actions">
-            <a href="#apply" class="btn btn-primary">Apply Now</a>
-            <a href="#about" class="btn btn-secondary">Learn More</a>
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="./index.html#home" class="logo">
+                <img src="./lugcino.jpg" alt="Nomduva Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>NCEP NOMDUVA</h1>
+                    <p>Community Empowerment Project</p>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html#home" class="nav-link">Home</a></li>
+                <li><a href="./index.html#about" class="nav-link">About Us</a></li>
+                <li><a href="./index.html#services" class="nav-link">Services</a></li>
+                <li><a href="./ikhaya.html" class="active nav-link">iKhaya Golden Mic</a></li>
+                <li><a href="./index.html#impact" class="nav-link">Our Impact</a></li>
+                <li><a href="./index.html#founders" class="nav-link">Our Team</a></li>
+                <li><a href="./index.html#contact" class="nav-link btn-nav">Contact</a></li>
+            </ul>
         </div>
     </header>
 
-    <main class="container">
-        <!-- About Section -->
-        <section id="about" style="margin-bottom: 4rem;">
-            <div class="section-header">
-                <h2>Bridging the Creative Gap</h2>
-                <p>Unlocking KwaZulu-Natal’s Next Generation of Artists</p>
-            </div>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-                The local creative industry is overflowing with talent, but access to professional equipment, studio time, and industry guidance remains out of reach for many. <strong>iKhaya Golden Mic 2026</strong> offers structured mentorship, technical masterclasses, and stage opportunities to launch emerging voices across KwaZulu-Natal.
-            </p>
-        </section>
-
-        <!-- What We Offer -->
-        <section style="margin-bottom: 4rem;">
-            <div class="section-header">
-                <h2>What We Offer</h2>
-                <p>Comprehensive creative and business development</p>
-            </div>
-            <div class="grid-4">
-                <div class="card">
-                    <h3>Vocal & Production</h3>
-                    <p>Studio fundamentals, vocal discipline, song arrangement, and track recording skills.</p>
+    <!-- Hero Banner -->
+    <section class="hero" style="background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(45, 106, 79, 0.88)), url('./IMG-20260426-WA0001.jpg') center/cover no-repeat;">
+        <div class="container">
+            <div class="hero-content">
+                <h2>iKhaya Golden Mic Initiative</h2>
+                <p>Unearthing, nurturing, and amplifying grassroots creative talent in music, poetry, theatre, and vocal performance.</p>
+                <div class="hero-buttons">
+                    <a href="#register" class="btn btn-primary">Audition / Join Program</a>
+                    <a href="#about-program" class="btn btn-secondary">Explore Program</a>
                 </div>
-                <div class="card">
-                    <h3>Stage & Acting</h3>
-                    <p>Performance techniques, script study, audition strategy, and stage presence.</p>
-                </div>
-                <div class="card">
-                    <h3>Writing & Poetry</h3>
-                    <p>Lyricism, narrative design, scriptwriting, and spoken word refinement.</p>
-                </div>
-                <div class="card">
-                    <h3>Industry & Royalties</h3>
-                    <p>Guidance on copyrighting, royalty registration (SAMRO/CAPASSO), and self-marketing.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Timeline Section -->
-        <section style="margin-bottom: 4rem;">
-            <div class="section-header">
-                <h2>Program Timeline</h2>
-                <p>From community talent search to the live finale</p>
-            </div>
-            <table class="timeline-table">
-                <thead>
-                    <tr>
-                        <th>Phase</th>
-                        <th>Focus</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Phase 1</strong></td>
-                        <td>Auditions & Selection</td>
-                        <td>Open call talent search in Hammarsdale, Mpumalanga Township, and surrounding KZN regions.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Phase 2</strong></td>
-                        <td>Mentorship Bootcamp</td>
-                        <td>6-week hands-on training with industry professionals covering performance and music business.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Phase 3</strong></td>
-                        <td>Studio & Rehearsals</td>
-                        <td>Recording original works, mastering vocal sets, and building artist press kits.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Phase 4</strong></td>
-                        <td>Grand Finale Showcase</td>
-                        <td>Live production performance in front of talent scouts, community leaders, and industry judges.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Eligibility Section -->
-        <section id="apply" style="margin-bottom: 4rem;">
-            <div class="eligibility-box">
-                <h2>Who Can Apply?</h2>
-                <p>We invite passionate young creators to step forward and refine their craft.</p>
-                <ul class="eligibility-list">
-                    <li><strong>Age Group:</strong> Youth aged 15–35 residing in KwaZulu-Natal</li>
-                    <li><strong>Disciplines:</strong> Musicians, Vocalists, Actors, Poets, and Scriptwriters</li>
-                    <li><strong>Requirement:</strong> Dedication to attending workshops and building a career in arts</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Contact & Location Card -->
-        <div class="contact-card">
-            <h2>Get Involved Today</h2>
-            <p>Whether you're an aspiring artist, corporate sponsor, or community mentor, we welcome your support.</p>
-            <div class="contact-details">
-                <p>🗺️ E169 Woodyglan, Hammarsdale, Mpumalanga Township, 3699</p>
-                <p>✉️ <a href="mailto:info@nomduva.org.za">info@nomduva.org.za</a></p>
-                <p>📱 <a href="https://wa.me/27710190858" target="_blank">+27 71 019 0858</a></p>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Program Overview -->
+    <section id="about-program" class="container">
+        <h2 class="section-title">About iKhaya Golden Mic</h2>
+        <p class="section-subtitle">Empowering the next generation of creative artists and performers.</p>
+        
+        <div class="grid-2">
+            <div class="about-text">
+                <h3>Our Vision for Local Creatives</h3>
+                <p><strong>iKhaya Golden Mic</strong> is a flagship creative arts initiative by the Nomduva Community Empowerment Project (NCEP). It was established to provide a structured, safe, and professional platform for youth in local townships to express their artistic talents.</p>
+                <p>We bridge the gap between passion and professional industry readiness by providing vocal training, stage presentation coaching, music production insights, and mentorship from experienced industry personnel.</p>
+            </div>
+            <div class="about-image">
+                <img src="./IMG-20260722-WA0022.jpg" alt="iKhaya Golden Mic Performance Space" style="border-radius: 8px; width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Pillars of iKhaya Golden Mic -->
+    <section class="services bg-light">
+        <div class="container">
+            <h2 class="section-title">Program Components</h2>
+            <p class="section-subtitle">What artists experience during the program.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-microphone-alt service-icon"></i>
+                    <h3>Vocal & Stage Mastery</h3>
+                    <p>Hands-on training focusing on breath control, vocal projection, stage presence, and live performance confidence.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-sliders-h service-icon"></i>
+                    <h3>Music & Media Production</h3>
+                    <p>Introduction to sound recording, studio etiquette, songwriting workshops, and music distribution basics.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-people-carry service-icon"></i>
+                    <h3>Mentorship & Career Guidance</h3>
+                    <p>Direct guidance on artist branding, copyright awareness, financial literacy, and navigating the creative industry responsibly.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-award service-icon"></i>
+                    <h3>Talent Showcases & Events</h3>
+                    <p>Live community showcases and competition events where participants perform before industry scouts and public audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application / Registration Form -->
+    <section id="register" class="container">
+        <h2 class="section-title">Audition & Registration</h2>
+        <p class="section-subtitle">Are you an aspiring artist? Apply to join our next developmental cohort.</p>
+        
+        <div class="contact-wrapper">
+            <form class="contact-form" id="ikhayaForm">
+                <h3>Artist Registration Form</h3>
+                <div class="form-group">
+                    <label for="artist-name">Full Name / Artist Name</label>
+                    <input type="text" id="artist-name" placeholder="e.g. Sipho Dlamini (Sipho Keys)" required>
+                </div>
+                <div class="form-group">
+                    <label for="artist-email">Email Address</label>
+                    <input type="email" id="artist-email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="artist-phone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="artist-phone" placeholder="e.g. +27 71 000 0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="talent-category">Primary Category</label>
+                    <input type="text" id="talent-category" placeholder="e.g. Vocalist, Poet, Actor, Producer, Rapper" required>
+                </div>
+                <div class="form-group">
+                    <label for="artist-bio">Brief Introduction / Demo Link</label>
+                    <textarea id="artist-bio" placeholder="Tell us about your background or share a link to your performance video/audio..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Nomduva NCEP</h4>
+                    <p>A community empowerment organization focused on educational assistance, leadership, skills development, and youth opportunities across South Africa.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#about">About NCEP</a></li>
+                        <li><a href="./index.html#services">Our Pillars</a></li>
+                        <li><a href="./ikhaya.html">iKhaya Golden Mic</a></li>
+                        <li><a href="./index.html#founders">Leadership</a></li>
+                        <li><a href="./index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <p class="social-note">Follow our official channels:</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61592073793776" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/NomduvaNCEP" target="_blank" rel="noopener" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/nomduva_ncep?igsh=MTNxb2dzYWphaDBraQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/27710190858" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nomduva Community Empowerment Project (NCEP). All rights reserved.</p>
+                <p class="tagline">Empowering Communities • Creating Opportunities • Transforming Lives</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File Linking -->
+    <script src="./script.js"></script>
 </body>
-  </html>
-  
+                    </html>
+                        
