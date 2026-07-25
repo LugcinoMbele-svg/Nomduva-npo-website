@@ -652,3 +652,94 @@ p {
     }
    }
        
+/* ==========================================
+   11. Mobile Breakpoint Refinements
+   ========================================== */
+
+/* Small Mobile Devices (320px to 375px) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .form-card, 
+    .contact-form {
+        padding: 18px 14px;
+    }
+
+    .logo-text h1 {
+        font-size: 0.95rem;
+    }
+
+    .logo-text p {
+        font-size: 0.65rem;
+    }
+
+    .slider {
+        height: 240px;
+    }
+
+    .slide-caption {
+        padding: 10px;
+    }
+
+    .slide-caption h4 {
+        font-size: 0.9rem;
+    }
+
+    .slide-caption p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Medium Mobile Devices (376px to 576px) */
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-btn {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+
+    .founders-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Touch Device Interaction Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn, 
+    .nav-link, 
+    .slider-btn {
+        min-height: 44px; /* Minimum target size for mobile tap accuracy */
+    }
+   }
+   
