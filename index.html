@@ -3,329 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nomduva Community Empowerment Project (NCEP) - Dedicated to sustainable development, youth empowerment, skills training, and creative development in KwaZulu-Natal.">
     <title>Nomduva - Community Empowerment Project (NCEP)</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Dedicated to sustainable development, youth empowerment, and skills training in KwaZulu-Natal.">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="#home" class="logo">
-                    <h1>NCEP NOMDUVA</h1>
-                    <p>Community Empowerment Project</p>
-                </a>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="ikhaya.html">iKhaya Golden Mic</a></li>
-                    <li><a href="#impact">Our Impact</a></li>
-                    <li><a href="#founders">Our Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="./lugcino.jpg" alt="Nomduva NPO Logo" class="logo">
+            <span class="brand-name">Nomduva NPO</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link btn-nav">Get Involved</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Empowering Communities, Transforming Futures</h2>
-                <p>Nomduva Community Empowerment Project (NCEP) drives sustainable development, youth career opportunities, skills development, and creative arts initiatives.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Involved</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
+        <div class="hero-content">
+            <h1>Empowering Communities, Building Futures</h1>
+            <p>Nomduva Community Empowerment Project (NCEP) is dedicated to youth development, skills training, and social upliftment.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Nomduva NCEP</h2>
-            <p class="section-subtitle">Building self-reliant, resilient communities through dedicated intervention.</p>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>We are dedicated to uplifting underprivileged and township communities through educational intervention, practical skills training, economic inclusion, and creative development. Our primary goal is establishing sustainable systems that break systemic barriers for local youth.</p>
-                    
-                    <h3>Our Vision</h3>
-                    <p>To cultivate self-sufficient, empowered communities where youth access equitable opportunities to unlock their full potential and contribute meaningfully to socio-economic growth.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h4>Career Readiness</h4>
-                        <p>Youth provided with job placement coaching and professional development.</p>
-                    </div>
-                    <div class="stat">
-                        <h4>50+ Active</h4>
-                        <p>Participants currently enrolled across our developmental cohorts.</p>
-                    </div>
-                    <div class="stat">
-                        <h4>6 Core Pillars</h4>
-                        <p>Focusing on Creative Arts, Entrepreneurship, Youth Employment, Skills Development, Health, and Environmental Care.</p>
-                    </div>
-                </div>
+    <section id="about" class="container">
+        <div class="grid-2">
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>NCEP focuses on creating sustainable development opportunities for young people and families across KwaZulu-Natal. Through hands-on programs, mentorship, and creative initiatives, we aim to bridge the gap to self-sufficiency.</p>
+            </div>
+            <div class="about-image">
+                <img src="./IMG-20260426-WA0001.jpg" alt="Nomduva Community Event">
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light">
         <div class="container">
-            <h2>Our Core Pillars & Services</h2>
-            <p class="section-subtitle">Holistic programs designed to nurture talent and professional readiness.</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Education & Mentorship</h3>
-                    <p>Scholarship guidance, academic tutoring, career pathway mapping, and structured mentorship programs for youth and adult learners.</p>
+            <h2 class="section-title">Our Initiatives</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fas fa-user-graduate card-icon"></i>
+                    <h3>Youth Skills Development</h3>
+                    <p>Providing essential practical training to equip youth with modern job-ready skillsets.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Skills & Entrepreneurship</h3>
-                    <p>Practical vocational skills, business literacy workshops, incubation support, and job-readiness coaching designed for sustainable employment.</p>
+                <div class="card">
+                    <i class="fas fa-hands-holding-circle card-icon"></i>
+                    <h3>Community Outreach</h3>
+                    <p>Direct support programs addressing immediate social needs across local communities.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-masks-theater"></i>
-                    <h3>Creative Arts & Media</h3>
-                    <p>Through signature initiatives like <em>iKhaya Golden Mic</em>, we discover, train, and promote youth talent across music, acting, writing, and performance.</p>
+                <div class="card">
+                    <i class="fas fa-paint-brush card-icon"></i>
+                    <h3>Creative Arts</h3>
+                    <p>Empowering local talent through creative projects, culture, and expressive development.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-heart-pulse"></i>
-                    <h3>Health & Social Wellness</h3>
-                    <p>Community health drives, substance abuse awareness, psychosocial support, and advocacy for safe, vibrant social environments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section id="impact" class="impact">
-        <div class="container">
-            <h2>Our Community Impact</h2>
-            <p class="section-subtitle">Real initiatives delivering measurable social change.</p>
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <img src="https://via.placeholder.com/400x250?text=Youth+Mentorship" alt="Education and Mentorship Transformation">
-                    <h3>Educational Transformation</h3>
-                    <p>Providing essential resources, career guidance workshops, and academic interventions that keep youth motivated and in school.</p>
-                </div>
-
-                <div class="impact-card">
-                    <img src="https://via.placeholder.com/400x250?text=iKhaya+Golden+Mic" alt="iKhaya Golden Mic Creative Program">
-                    <h3>iKhaya Golden Mic Initiative</h3>
-                    <p>Equipping young creatives with professional vocal training, theatrical production insights, networking opportunities, and industry exposure.</p>
-                </div>
-
-                <div class="impact-card">
-                    <img src="https://via.placeholder.com/400x250?text=Community+Development" alt="Community Empowerment and Hubs">
-                    <h3>Community Empowerment Hubs</h3>
-                    <p>Collaborating with local stakeholders to establish safe hubs for talent showcases, leadership development, and business workshops.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership & Team Section -->
-    <section id="founders" class="founders">
-        <div class="container">
-            <h2>Executive Leadership & Team</h2>
-            <p class="section-subtitle">Dedicated leadership driving transparent governance and social transformation.</p>
-            
-            <div class="founders-grid">
-                <!-- Executive 1: Busisiwe Ntuli -->
-                <article class="founder-card">
-                    <div class="founder-image-wrapper">
-                        <img src="IMG-20260722-WA0022.jpg" alt="Busisiwe Ntuli - Founder and Executive Director">
-                        <div class="founder-overlay">
-                            <div class="founder-social">
-                                <a href="mailto:busisiwe.ntuli@nomduva.org.za" aria-label="Email Busisiwe Ntuli"><i class="fas fa-envelope"></i></a>
-                                <a href="#contact" aria-label="Contact via Form"><i class="fas fa-paper-plane"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="founder-details">
-                        <h3>Busisiwe Ntuli</h3>
-                        <p class="founder-role">Founder & Executive Director</p>
-                        <p class="founder-bio">
-                            Busisiwe is the visionary founder behind Nomduva Community Empowerment Project. She established NCEP to deliver tangible opportunities for youth and cultivate sustainable development within disadvantaged communities.
-                        </p>
-                        <p class="founder-bio">
-                            Under her strategic guidance—including flagship initiatives like <em>iKhaya Golden Mic</em>—the organization nurtures emerging talents, instills leadership skills, and encourages healthy, empowered life choices.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Executive 2: Lugcino Ntsuzi -->
-                <article class="founder-card">
-                    <div class="founder-image-wrapper">
-                        <img src="lugcino.jpg" alt="Lugcino Ntsuzi - Public Officer">
-                        <div class="founder-overlay">
-                            <div class="founder-social">
-                                <a href="mailto:lugcino@nomduva.org.za" aria-label="Email Lugcino Ntsuzi"><i class="fas fa-envelope"></i></a>
-                                <a href="#contact" aria-label="Contact via Form"><i class="fas fa-paper-plane"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="founder-details">
-                        <h3>Lugcino Ntsuzi</h3>
-                        <p class="founder-role">Public Officer</p>
-                        <p class="founder-bio">
-                            Lugcino manages organizational governance, administration, and public accountability at NCEP. He brings extensive expertise in strategic planning, institutional compliance, and community outreach.
-                        </p>
-                        <p class="founder-bio">
-                            He drives partner development, public communication, and fundraising initiatives designed to expand NCEP’s reach across KwaZulu-Natal. His guiding ethos: <em>"Building opportunities today for stronger communities tomorrow."</em>
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Partner With Us to Make an Impact</h2>
-            <p>Whether you want to volunteer, sponsor a talent program, or partner strategically, your involvement transforms lives.</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Donate Now</a>
-                <a href="#contact" class="btn btn-secondary">Become a Partner</a>
-                <a href="#contact" class="btn btn-secondary">Volunteer</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p class="section-subtitle">We welcome partnership inquiries, volunteer applications, and general questions.</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <!-- General Enquiries -->
-                    <div class="contact-block">
-                        <h4>General Enquiries</h4>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <p><a href="mailto:info@nomduva.org.za">info@nomduva.org.za</a></p>
-                                <p><a href="mailto:inquiry@nomduva.org.za">inquiry@nomduva.org.za</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <p><a href="tel:+27710190858">+27 71 019 0858</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Leadership Contacts -->
-                    <div class="contact-block">
-                        <h4>Direct Leadership</h4>
-                        <div class="contact-item">
-                            <i class="fas fa-user-tie"></i>
-                            <div>
-                                <p><strong>Busisiwe Ntuli</strong> (Founder)</p>
-                                <p><a href="mailto:busisiwe.ntuli@nomduva.org.za">busisiwe.ntuli@nomduva.org.za</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item" style="margin-top: 10px;">
-                            <i class="fas fa-user-shield"></i>
-                            <div>
-                                <p><strong>Lugcino Ntsuzi</strong> (Public Officer)</p>
-                                <p><a href="mailto:lugcino@nomduva.org.za">lugcino@nomduva.org.za</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Location & Hours -->
-                    <div class="contact-block">
-                        <h4>Physical Address & Hours</h4>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <p>E169 Woodyglan, Hammarsdale</p>
-                                <p>Mpumalanga Township, 3699</p>
-                                <p>KwaZulu-Natal, South Africa</p>
-                            </div>
-                        </div>
-                        <div class="contact-item" style="margin-top: 10px;">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <p><strong>Mon – Fri:</strong> 08:00 – 16:45</p>
-                                <p><strong>Sat, Sun & Public Holidays:</strong> Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Contact Form -->
-                <form class="contact-form" id="contactForm">
-                    <h3>Send Us a Message</h3>
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea placeholder="How would you like to connect or collaborate with NCEP?" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>About Nomduva NCEP</h4>
-                    <p>A community empowerment organization focused on educational assistance, leadership, skills development, and youth opportunities across South Africa.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About NCEP</a></li>
-                        <li><a href="#services">Our Pillars</a></li>
-                        <li><a href="ikhaya.html">iKhaya Golden Mic</a></li>
-                        <li><a href="#founders">Leadership</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect With Us</h4>
-                    <p class="social-note" style="margin-bottom: 12px; font-size: 14px;">Follow our official channels:</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=61592073793776" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/NomduvaNCEP" target="_blank" rel="noopener" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/nomduva_ncep?igsh=MTNxb2dzYWphaDBraQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/27710190858" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Nomduva Community Empowerment Project (NCEP). All rights reserved.</p>
-                <p class="tagline">Empowering Communities • Creating Opportunities • Transforming Lives</p>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Nomduva Community Empowerment Project. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript File Linking -->
-    <script src="script.js"></script>
+    <!-- Local JavaScript File -->
+    <script src="./script.js"></script>
 </body>
-    </html>
-    
+                </html>
+            
