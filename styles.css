@@ -1,60 +1,263 @@
-/* ==========================================
-   IMPACT COUNTERS
-========================================== */
-
-.impact-section{
-    background:#0f172a;
-    color:#fff;
-    padding:90px 0;
+/* ==========================================================================
+   1. CSS VARIABLES & THEME CONFIGURATION
+   ========================================================================== */
+:root {
+  /* Brand Colors */
+  --primary-color: #1b5e20;        /* Deep Forest Green (Trust & Growth) */
+  --primary-hover: #144417;
+  --secondary-color: #e65100;      /* Warm Accent / Call-to-Action */
+  --secondary-hover: #bf4300;
+  
+  /* Neutral Colors */
+  --bg-main: #f9fbf9;              /* Off-white background */
+  --bg-surface: #ffffff;           /* Card & Container background */
+  --text-main: #212529;            /* Primary dark text */
+  --text-muted: #6c757d;           /* Subtitles and secondary text */
+  --border-color: #e0e0e0;
+  
+  /* Typography & Spacing */
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.counter-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:30px;
-    margin-top:50px;
+/* ==========================================================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.counter-card{
-    background:#ffffff;
-    color:#1e293b;
-    text-align:center;
-    padding:35px 25px;
-    border-radius:18px;
-    transition:.35s;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+html {
+  scroll-behavior: smooth;
 }
 
-.counter-card:hover{
-    transform:translateY(-10px);
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-.counter-icon{
-    width:80px;
-    height:80px;
-    margin:auto;
-    border-radius:50%;
-    background:#f59e0b;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:30px;
-    color:white;
-    margin-bottom:20px;
+/* Images & Media */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
 }
 
-.counter{
-    font-size:3rem;
-    font-weight:800;
-    color:#f59e0b;
-    margin-bottom:10px;
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
 }
 
-.counter-card h4{
-    margin-bottom:15px;
+a:hover {
+  text-decoration: underline;
 }
 
-.counter-card p{
-    color:#64748b;
-    font-size:.95rem;
+/* Container */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
+
+/* ==========================================================================
+   3. NAVIGATION / HEADER
+   ========================================================================== */
+.navbar {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('IMG-20260722-WA0022.jpg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 5rem 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   5. BUTTONS & UTILITIES
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* ==========================================================================
+   6. CARDS & GRID LAYOUT (Projects / About Sections)
+   ========================================================================== */
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--bg-surface);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+footer {
+  background-color: #111827;
+  color: #9ca3af;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (Mobile adjustments)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+   }
+   
