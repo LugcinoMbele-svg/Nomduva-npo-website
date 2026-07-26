@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nomduva NCEP Social Hub - Stay connected with our latest news, youth success stories, live updates, media gallery, and upcoming events in Hammarsdale.">
+    <title>Social Hub & Live Updates | Nomduva Community Empowerment Project</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Social Page Specific Custom Styling */
+        .social-hero-box {
+            background: linear-gradient(135deg, rgba(0,102,204,0.05) 0%, rgba(16,185,129,0.05) 100%);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .social-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .social-card svg {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Platform Color Accents */
+        .social-card.facebook svg { fill: #1877F2; }
+        .social-card.whatsapp svg { fill: #25D366; }
+        .social-card.instagram svg { fill: #E4405F; }
+        .social-card.youtube svg { fill: #FF0000; }
+        .social-card.tiktok svg { fill: #000000; }
+        .social-card.linkedin svg { fill: #0A66C2; }
+        .social-card.x-twitter svg { fill: #000000; }
+
+        .campaign-banner {
+            background: var(--primary-color, #0066cc);
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .campaign-banner h3 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .campaign-badge {
+            background: var(--accent-color, #f59e0b);
+            color: #000;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hashtag-pill {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #334155;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.3rem;
+        }
+
+        .quote-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--accent-color, #f59e0b);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+        }
+
+        .contact-pill-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body class="main-site">
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <img src="IMG-20260426-WA0001.jpg" alt="Nomduva NCEP Logo" style="height: 45px; width: auto; border-radius: 4px;">
+                <div style="display: flex; flex-direction: column;">
+                    <span class="brand-name">NOMDUVA</span>
+                    <span class="brand-sub">Community Empowerment Project</span>
+                </div>
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="ikhaya.html">Ikhaya Golden Mic</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="socials.html" class="active">Social Hub</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="sponsors.html" class="btn-highlight">Support Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Section -->
+    <section class="hero hero-subpage">
+        <div class="container hero-content">
+            <h1>Social Hub & Community Feed</h1>
+            <p>Stay connected with our journey. Explore continuous updates, youth success stories, media highlights, and community activities in real time.</p>
+        </div>
+    </section>
+
+    <!-- Welcome & Social Links Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="social-hero-box">
+                <span class="badge">Stay Connected</span>
+                <h2>Welcome to the Nomduva Social Hub</h2>
+                <p class="section-lead" style="margin-top: 0.5rem;">This is our live interactive space where we share community achievements, upcoming auditions, behind-the-scenes moments, and project updates.</p>
+                <p>Every post reflects our dedication to empowering young people, inspiring local talent, and creating sustainable pathways through education, leadership, and performance arts.</p>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 2rem;">Follow Our Official Platforms</h3>
+            <p style="text-align: center; font-size: 0.95rem; color: #64748b;">Click any link below to connect with us directly:</p>
+
+            <!-- Social Media Icon Grid with Real Links -->
+            <div class="social-links-grid">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/nomduva_ncep?igsh=MTNxb2dzYWphaDBraQ==" class="social-card instagram" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <span>Instagram</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61592073793776" class="social-card facebook" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.6 13.73 5.6c1.07 0 2.19.19 2.19.19v2.41h-1.23c-1.24 0-1.63.77-1.63 1.56V12h2.72l-.43 3h-2.29v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+                    <span>Facebook</span>
+                </a>
+
+                <!-- X / Twitter -->
+                <a href="https://x.com/NomduvaNCEP" class="social-card x-twitter" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <span>X (Twitter)</span>
+                </a>
+
+                <!-- WhatsApp Contact / QR Link -->
+                <a href="https://wa.me/qr/33S4L2TOKZXYE1" class="social-card whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.27-2.42 5.83a8.18 8.18 0 0 1-5.83 2.41c-1.48 0-2.93-.39-4.21-1.13l-.3-.18-3.12.82.83-3.04-.2-.32a8.212 8.212 0 0 1-1.26-4.39c0-4.55 3.69-8.24 8.24-8.24z"/></svg>
+                    <span>WhatsApp QR</span>
+                </a>
+
+                <!-- WhatsApp Direct Line -->
+                <a href="https://wa.me/27710190858" class="social-card whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.27-2.42 5.83a8.18 8.18 0 0 1-5.83 2.41c-1.48 0-2.93-.39-4.21-1.13l-.3-.18-3.12.82.83-3.04-.2-.32a8.212 8.212 0 0 1-1.26-4.39c0-4.55 3.69-8.24 8.24-8.24z"/></svg>
+                    <span>WhatsApp Direct</span>
+                </a>
+            </div>
+
+            <!-- WhatsApp Direct Contact Options -->
+            <div style="margin-top: 2rem;">
+                <h4>Direct WhatsApp Contacts</h4>
+                <div class="contact-pill-box">
+                    <div>
+                        <strong>Primary WhatsApp (QR Code Link)</strong>
+                        <p style="margin: 0; font-size: 0.85rem; color: #64748b;">Add directly via QR code contact link</p>
+                    </div>
+                    <a href="https://wa.me/qr/33S4L2TOKZXYE1" target="_blank" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Connect via QR</a>
+                </div>
+
+                <div class="contact-pill-box">
+                    <div>
+                        <strong>Secondary WhatsApp Line</strong>
+                        <p style="margin: 0; font-size: 0.85rem; color: #64748b;">+27 71 019 0858</p>
+                    </div>
+                    <a href="https://wa.me/27710190858" target="_blank" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Campaign Banner -->
+    <div class="container">
+        <div class="campaign-banner">
+            <div>
+                <span class="campaign-badge">Featured Campaign 2026</span>
+                <h3>Ikhaya Golden Mic Talent Showcase</h3>
+                <p>Discovering South Africa's next generation of singers, poets, rappers, and actors. Follow the live journey from township auditions to the Grand Finale!</p>
+            </div>
+            <div>
+                <a href="ikhaya.html" class="btn-highlight" style="background: #ffffff; color: #000; text-decoration: none; font-weight: 700; padding: 0.8rem 1.4rem; border-radius: 6px;">Registration Open</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Spotlight & Weekly Quote -->
+    <section class="about-section">
+        <div class="container">
+            <div class="grid-2" style="gap:2rem; align-items: start;">
+                
+                <div>
+                    <h3>Community & Volunteer Spotlight</h3>
+                    <p>Every month, NCEP celebrates the dedicated volunteers, school ambassadors, and local leaders who donate their time and energy to mentor our youth.</p>
+                    <p style="margin-top: 0.8rem;">Have you participated in one of our programmes or workshops? We'd love to highlight your experience!</p>
+                    <a href="contact.html" class="btn-primary" style="margin-top: 1rem; display:inline-block;">Share Your Story</a>
+                </div>
+
+                <div>
+                    <h3>Sponsor & Partner Recognition</h3>
+                    <p>We extend our deepest gratitude to the organisations, businesses, and local stakeholders who believe in youth empowerment.</p>
+                    <div class="quote-box">
+                        <p>"Empowering one young person today creates a stronger, self-sustaining community tomorrow."</p>
+                        <span style="font-size: 0.85rem; font-weight: 700; color: #64748b; display: block; margin-top: 0.5rem;">— Nomduva NCEP Core Motto</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Official Campaign Hashtags -->
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                <h4 style="margin-bottom: 0.8rem;">Join the Online Conversation</h4>
+                <div>
+                    <span class="hashtag-pill">#NomduvaCommunityEmpowerment</span>
+                    <span class="hashtag-pill">#IkhayaGoldenMic</span>
+                    <span class="hashtag-pill">#YouthEmpowerment</span>
+                    <span class="hashtag-pill">#BuildingFutures</span>
+                    <span class="hashtag-pill">#TalentWithPurpose</span>
+                    <span class="hashtag-pill">#CommunityImpact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+                    <img src="IMG-20260426-WA0001.jpg" alt="Nomduva Logo" style="height: 40px; width: auto; border-radius: 4px;">
+                    <h3 style="margin: 0;">Nomduva NCEP</h3>
+                </div>
+                <p>Dedicated to youth development, talent empowerment, education, and social upliftment in vulnerable communities.</p>
+                <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--accent-color, #f59e0b);">Registered Non-Profit Organisation (308-012 NPO)</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact & Location</h3>
+                <p><strong>Email:</strong> info@nomduva.org.za</p>
+                <p><strong>Address:</strong> E169 Woodyglan, Hammarsdale, Mpumalanga Township, 3699</p>
+                <p><strong>Hours:</strong> Mon – Fri: 08:00 – 16:45</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="socials.html">Social Hub</a></li>
+                    <li><a href="projects.html">Previous Projects</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="sponsors.html">Sponsors & Partners</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Nomduva Community Empowerment Project (NCEP). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                                                                              </html>
+      
