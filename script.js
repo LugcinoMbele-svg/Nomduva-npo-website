@@ -1,57 +1,109 @@
-/* ==========================================
-   Animated Counter
-========================================== */
+/**
+ * Nomduva Community Empowerment Project (NCEP)
+ * Interactive Site Features & Form Behaviors
+ */
 
-const counters = document.querySelectorAll('.counter');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ==========================================
+    // 1. Mobile Navigation Toggle
+    // ==========================================
+    const navContainer = document.querySelector('.nav-container');
+    const mainNav = document.querySelector('.main-nav');
 
-const startCounter = (counter) => {
+    if (navContainer && mainNav) {
+        // Create mobile toggle button dynamically if it doesn't exist
+        if (!document.querySelector('.mobile-menu-toggle')) {
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'mobile-menu-toggle';
+            toggleBtn.setAttribute('aria-label', 'Toggle Navigation Menu');
+            toggleBtn.innerHTML = '&#9776;'; // Hamburger icon
+            
+            // Inline styling for toggle button
+            toggleBtn.style.background = 'transparent';
+            toggleBtn.style.border = 'none';
+            toggleBtn.style.color = '#ffffff';
+            toggleBtn.style.fontSize = '1.8rem';
+            toggleBtn.style.cursor = 'pointer';
+            toggleBtn.style.display = 'none'; // Shown via CSS media queries
 
-    const target = +counter.dataset.target;
+            navContainer.appendChild(toggleBtn);
 
-    let count = 0;
-
-    const speed = target / 80;
-
-    const update = () => {
-
-        count += speed;
-
-        if (count < target) {
-
-            counter.innerText = Math.floor(count);
-
-            requestAnimationFrame(update);
-
-        } else {
-
-            counter.innerText = target + "+";
-
+            toggleBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-open');
+                if (mainNav.classList.contains('nav-open')) {
+                    toggleBtn.innerHTML = '&#10005;'; // Close 'X' icon
+                } else {
+                    toggleBtn.innerHTML = '&#9776;'; // Hamburger icon
+                }
+            });
         }
+    }
 
-    };
+    // ==========================================
+    // 2. Smooth Scrolling for Internal Links
+    // ==========================================
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            
+            if (targetId !== '#' && targetId.length > 1) {
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
 
-    update();
+                    // Close mobile menu if open
+                    if (mainNav && mainNav.classList.contains('nav-open')) {
+                        mainNav.classList.remove('nav-open');
+                        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+                        if (toggleBtn) toggleBtn.innerHTML = '&#9776;';
+                    }
+                }
+            }
+        });
+    });
 
-};
+    // ==========================================
+    // 3. Dynamic Form Submission Feedback
+    // ==========================================
+    const forms = document.querySelectorAll('form');
 
-const observer = new IntersectionObserver((entries)=>{
+    forms.forEach(form => {
+        form.addEventListener('submit', function (e) {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            if (submitBtn) {
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Preparing Email...';
+                submitBtn.style.opacity = '0.8';
 
-    entries.forEach(entry=>{
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.opacity = '1';
+                }, 3000);
+            }
+        });
+    });
 
-        if(entry.isIntersecting){
+    // ==========================================
+    // 4. Highlight Active Navigation Link
+    // ==========================================
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.main-nav a');
 
-            startCounter(entry.target);
-
-            observer.unobserve(entry.target);
-
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
         }
-
     });
 
 });
-
-counters.forEach(counter=>{
-
-    observer.observe(counter);
-
-});
+           
