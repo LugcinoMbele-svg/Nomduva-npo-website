@@ -164,3 +164,154 @@
 </body>
                         </html>
                 
+<section class="registration-section section-padding">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="badge">Registration Open</span>
+            <h2>Ikhaya Golden Mic Contestant Application</h2>
+            <p>Fill out the official contestant registration form below to secure your audition spot.</p>
+        </div>
+
+        <div class="card form-card" style="max-width: 800px; margin: 2rem auto; padding: 2.5rem;">
+            <form id="ikhaya-registration-form" action="mailto:info@nomduva.org.za" method="post" enctype="text/plain">
+                
+                <!-- 1. Personal Information -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">1. Personal Details</h3>
+                
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="fullName">Full Name & Surname *</label>
+                    <input type="text" id="fullName" name="Full Name" class="form-control" placeholder="Enter your full name" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div class="grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group">
+                        <label for="idNumber">ID / Birth Certificate No. *</label>
+                        <input type="text" id="idNumber" name="ID or Birth Cert Number" class="form-control" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="Date of Birth" class="form-control" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div class="grid-3" style="gap: 1rem; margin-bottom: 1.5rem;">
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="Age" min="5" max="100" class="form-control" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="Gender" class="form-control" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="">Select Gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Home Language *</label>
+                        <input type="text" id="language" name="Home Language" class="form-control" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <!-- 2. Contact Information -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">2. Contact Details</h3>
+                
+                <div class="grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group">
+                        <label for="phone">Cell Phone Number *</label>
+                        <input type="tel" id="phone" name="Cell Phone" class="form-control" placeholder="e.g. 0821234567" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="altPhone">Alternative Phone Number</label>
+                        <input type="tel" id="altPhone" name="Alt Phone" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="Email" class="form-control" placeholder="name@example.com" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="address">Residential Address *</label>
+                    <input type="text" id="address" name="Address" placeholder="Street address / Section" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <!-- 3. Parent / Guardian (Under 18) -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">3. Parent / Guardian Details (If Under 18)</h3>
+                
+                <div class="grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group">
+                        <label for="guardianName">Parent/Guardian Name</label>
+                        <input type="text" id="guardianName" name="Guardian Name" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="guardianRelation">Relationship</label>
+                        <input type="text" id="guardianRelation" name="Guardian Relationship" placeholder="Parent / Legal Guardian" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="guardianPhone">Parent/Guardian Contact Number</label>
+                    <input type="tel" id="guardianPhone" name="Guardian Phone" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <!-- 4. Talent Selection -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">4. Talent Category & Performance</h3>
+                
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="category">Primary Talent Category *</label>
+                    <select id="category" name="Talent Category" class="form-control" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="">Select Category</option>
+                        <option value="Singing">Singing</option>
+                        <option value="Poetry">Poetry / Spoken Word</option>
+                        <option value="Acting">Acting / Drama</option>
+                        <option value="Public Speaking">Public Speaking</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Rap/Hip-Hop">Rap / Hip-Hop</option>
+                        <option value="Dance">Dance</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group">
+                        <label for="stageName">Stage Name (If Applicable)</label>
+                        <input type="text" id="stageName" name="Stage Name" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="performanceTitle">Title of Performance</label>
+                        <input type="text" id="performanceTitle" name="Performance Title" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="talentDescription">Brief Description of Your Performance / Experience *</label>
+                    <textarea id="talentDescription" name="Talent Description" rows="3" class="form-control" placeholder="Describe your performance piece or past talent competition experience..." required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </div>
+
+                <!-- 5. Consent & Declaration -->
+                <h3 style="color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">5. Media Consent & Declaration</h3>
+                
+                <div class="form-group" style="margin-bottom: 1rem; font-size: 0.9rem;">
+                    <label style="display: flex; align-items: flex-start; gap: 8px;">
+                        <input type="checkbox" name="Media Consent Agreed" value="Yes" required style="margin-top: 3px;">
+                        <span>I consent to photographs, audio, and video recordings being taken during competition activities to be used by Nomduva NCEP for promotional and youth development purposes. *</span>
+                    </label>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <label style="display: flex; align-items: flex-start; gap: 8px;">
+                        <input type="checkbox" name="Rules Declaration Agreed" value="Yes" required style="margin-top: 3px;">
+                        <span>I confirm that all information provided is accurate and agree to follow all competition rules set by NCEP organizers. *</span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-weight: 700; font-size: 1rem; border: none; cursor: pointer;">Submit Contestant Registration</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    
