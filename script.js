@@ -107,3 +107,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
            
+// ==============================================
+// Social Media & Link Sharing Functions
+// ==============================================
+function shareProject(event, platform, projectTitle) {
+    event.preventDefault();
+    const pageUrl = window.location.href;
+    const shareText = `Check out this project by Nomduva NCEP: ${projectTitle}`;
+    let shareUrl = '';
+
+    switch (platform) {
+        case 'whatsapp':
+            shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + ' ' + pageUrl)}`;
+            break;
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+            break;
+        case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`;
+            break;
+    }
+
+    if (shareUrl) {
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+}
+
+function copyProjectLink(event) {
+    event.preventDefault();
+    const pageUrl = window.location.href;
+
+    navigator.clipboard.writeText(pageUrl).then(() => {
+        alert('Project link copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
+                                                                }
+        
