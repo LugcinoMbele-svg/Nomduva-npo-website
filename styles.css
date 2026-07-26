@@ -359,3 +359,97 @@ p {
     .card { padding: 1.25rem; }
    }
    
+/* --- Project Card & Share Buttons --- */
+.project-card {
+    padding: 0 0 1.5rem 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    padding: 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-color, #0066cc);
+    text-transform: uppercase;
+}
+
+.card-title {
+    margin-top: 0.4rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.card-list {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Share Container */
+.share-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.share-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.share-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.share-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Platform Colors */
+.share-btn.whatsapp { background-color: #25D366; }
+.share-btn.facebook { background-color: #1877F2; }
+.share-btn.x-twitter { background-color: #000000; }
+.share-btn.copy-link { background-color: #64748b; }
+        
