@@ -15,34 +15,23 @@
     <link rel="stylesheet" href="styles.css">
     
     <style>
-        /* Custom styling for image placeholders */
-        .image-placeholder {
+        /* Responsive image gallery rules */
+        .gallery-img {
             width: 100%;
-            height: 220px;
-            background-color: #e9ecef;
-            border: 2px dashed #ced4da;
+            object-fit: cover;
             border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #6c757d;
-            text-align: center;
-            padding: 1rem;
-            margin-bottom: 1.2rem;
-            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .image-placeholder:hover {
-            border-color: var(--primary-color);
-            background-color: #e2e8f0;
+        .gallery-img:hover {
+            transform: scale(1.02);
         }
-        .image-placeholder span.icon {
-            font-size: 2rem;
-            margin-bottom: 0.3rem;
-        }
-        .image-IMG-20260724-WA0010.jpg span.label {
-            font-size: 0.85rem;
-            font-weight: 600;
+        .card-img-top {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px 6px 0 0;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -87,29 +76,25 @@
     <section class="about-section">
         <div class="container">
             <span class="badge">Featured Report</span>
-            <h2>Ikhaya Golden Mic Talent Showcase (2025 Edition)</h2>
-            <p class="section-lead">A comprehensive review of our flagship youth talent competition held in Hammarsdale.</p>
+            <h2>Ikhaya Golden Mic Talent Showcase & Graduation</h2>
+            <p class="section-lead">A comprehensive review of our flagship youth talent competition and certificate graduation ceremony held in Hammarsdale.</p>
 
             <div class="grid-2" style="align-items: start; margin-top: 2rem;">
                 
-                <!-- Photo Gallery Placeholders -->
+                <!-- Photo Gallery Grid -->
                 <div>
-                    <div class="IMG-20260724-WA0010.jpg">
-                        <span class="icon">📸</span>
-                        <span class="label">Main Stage Performance Photo</span>
-                        <small style="font-size: 0.75rem; color: #888;">Replace with <code>ikhaya-2025-stage.jpg</code></small>
+                    <!-- Main Stage Image -->
+                    <div style="margin-bottom: 1rem;">
+                        <img src="IMG-20260724-WA0010.jpg" alt="Nomduva NCEP Graduation Stage Performance" class="gallery-img" style="height: 260px;">
                     </div>
 
+                    <!-- Secondary Images -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div class="IMG-20260724-WA0004.jpg" style="height: 140px;">
-                            <span class="icon">🎤</span>
-                            <span class="label">Auditions Gallery</span>
-                            <small style="font-size: 0.7rem; color: #888;">Replace image</small>
+                        <div>
+                            <img src="IMG-20260724-WA0004.jpg" alt="Nomduva Acting Class Graduate" class="gallery-img" style="height: 160px;">
                         </div>
-                        <div class="IMG-20260724-WA0005.jpg" style="height: 140px;">
-                            <span class="icon">🏆</span>
-                            <span class="label">Winners Award Photo</span>
-                            <small style="font-size: 0.7rem; color: #888;">Replace image</small>
+                        <div>
+                            <img src="IMG-20260724-WA0005.jpg" alt="Graduation Ceremony Group Photo" class="gallery-img" style="height: 160px;">
                         </div>
                     </div>
                 </div>
@@ -117,7 +102,7 @@
                 <!-- Report Details -->
                 <div class="card">
                     <h3>Report Overview & Highlights</h3>
-                    <p>The 2025 Ikhaya Golden Mic edition brought together young vocalists, poets, and performers from across Hammarsdale and Mpumalanga Township for three weeks of intensive workshops and live showcase rounds.</p>
+                    <p>The Ikhaya Golden Mic & Performing Arts initiative brought together young vocalists, actors, and poets from across Hammarsdale and Mpumalanga Township for intensive training and live showcase certificate presentations.</p>
                     
                     <div style="background: var(--bg-light); padding: 1.2rem; border-radius: 6px; margin: 1rem 0;">
                         <h4 style="margin-bottom: 0.5rem; color: var(--primary-color);">Key Program Stats:</h4>
@@ -125,11 +110,11 @@
                             <li><strong>Registered Youth Participants:</strong> 120+ artists</li>
                             <li><strong>Workshop Facilitators:</strong> 4 industry mentors</li>
                             <li><strong>Audience Attendance:</strong> 350+ community members</li>
-                            <li><strong>Finalists Awarded Studio Sessions:</strong> Top 5 performers</li>
+                            <li><strong>Graduating Certificate Recipients:</strong> Top youth performers</li>
                         </ul>
                     </div>
 
-                    <p style="font-size: 0.95rem;"><strong>Outcome Summary:</strong> Participants completed sessions on stage presence, vocal discipline, and creative writing. All finalists received certificates of achievement and ongoing access to rehearsal space.</p>
+                    <p style="font-size: 0.95rem;"><strong>Outcome Summary:</strong> Participants completed modules on screen presence, dramatic acting, vocal control, and creative expression, culminating in an official certificate award ceremony.</p>
                 </div>
 
             </div>
@@ -145,54 +130,48 @@
             <div class="grid-3" style="margin-top: 2rem;">
 
                 <!-- Report Card 1 -->
-                <div class="card">
-                    <div class="IMG-20260724-WA0004.jpg" style="height: 160px;">
-                        <span class="icon">🎭</span>
-                        <span class="label">Acting Workshop Photo</span>
-                        <small style="font-size: 0.75rem;">Replace with <code>acting-class-2025.jpg</code></small>
+                <div class="card" style="padding: 0 0 1.5rem 0; overflow: hidden;">
+                    <img src="IMG-20260724-WA0004.jpg" alt="Youth Acting & Stagecraft" class="card-img-top">
+                    <div style="padding: 0 1.2rem;">
+                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase;">Theatre Arts Report</span>
+                        <h3 style="margin-top: 0.4rem; font-size: 1.25rem;">Youth Acting & Stagecraft Series</h3>
+                        <p style="font-size: 0.9rem;">Training enrolled students in dramatic arts, script interpretation, and screen acting techniques.</p>
+                        <ul style="font-size: 0.85rem; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li>✔ 6 consecutive Saturday modules</li>
+                            <li>✔ 1 final community graduation production</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Request Full PDF Report</a>
                     </div>
-                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase;">Theatre Arts Report</span>
-                    <h3 style="margin-top: 0.4rem; font-size: 1.25rem;">Youth Acting & Stagecraft Series</h3>
-                    <p style="font-size: 0.9rem;">Training 167 enrolled students in dramatic arts, script interpretation, and public speaking techniques.</p>
-                    <ul style="font-size: 0.85rem; padding-left: 1rem; margin-bottom: 1rem;">
-                        <li>✔ 6 consecutive Saturday modules</li>
-                        <li>✔ 1 final community play production</li>
-                    </ul>
-                    <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Request Full PDF Report</a>
                 </div>
 
                 <!-- Report Card 2 -->
-                <div class="card">
-                    <div class="image-placeholder" style="height: 160px;">
-                        <span class="icon">📖</span>
-                        <span class="label">Poetry Session Photo</span>
-                        <small style="font-size: 0.75rem;">Replace with <code>poetry-2025.jpg</code></small>
+                <div class="card" style="padding: 0 0 1.5rem 0; overflow: hidden;">
+                    <img src="IMG-20260724-WA0005.jpg" alt="Creative Writing & Spoken Word" class="card-img-top">
+                    <div style="padding: 0 1.2rem;">
+                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase;">Literature & Poetry</span>
+                        <h3 style="margin-top: 0.4rem; font-size: 1.25rem;">Creative Writing & Spoken Word</h3>
+                        <p style="font-size: 0.9rem;">Empowering young writers to express original stories and poems focusing on youth identity and resilience.</p>
+                        <ul style="font-size: 0.85rem; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li>✔ 45 poem submissions compiled</li>
+                            <li>✔ Spoken word showcase night</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Request Full PDF Report</a>
                     </div>
-                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase;">Literature & Poetry</span>
-                    <h3 style="margin-top: 0.4rem; font-size: 1.25rem;">Creative Writing & Spoken Word</h3>
-                    <p style="font-size: 0.9rem;">Empowering young writers to express original stories and poems focusing on youth identity and resilience.</p>
-                    <ul style="font-size: 0.85rem; padding-left: 1rem; margin-bottom: 1rem;">
-                        <li>✔ 45 poem submissions compiled</li>
-                        <li>✔ Spoken word showcase night</li>
-                    </ul>
-                    <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Request Full PDF Report</a>
                 </div>
 
                 <!-- Report Card 3 -->
-                <div class="card">
-                    <div class="image-placeholder" style="height: 160px;">
-                        <span class="icon">🤝</span>
-                        <span class="label">Community Drive Photo</span>
-                        <small style="font-size: 0.75rem;">Replace with <code>outreach-2025.jpg</code></small>
+                <div class="card" style="padding: 0 0 1.5rem 0; overflow: hidden;">
+                    <img src="IMG-20260724-WA0010.jpg" alt="Youth Leadership & Mentorship" class="card-img-top">
+                    <div style="padding: 0 1.2rem;">
+                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase;">Community Outreach</span>
+                        <h3 style="margin-top: 0.4rem; font-size: 1.25rem;">Youth Leadership & Mentorship</h3>
+                        <p style="font-size: 0.9rem;">Life skills, career guidance, and academic motivation sessions delivered to high school youth in Hammarsdale.</p>
+                        <ul style="font-size: 0.85rem; padding-left: 1rem; margin-bottom: 1rem;">
+                            <li>✔ Partnered with local schools Indlulamithi high school and Luthayi high school</li>
+                            <li>✔ Mentorship follow-ups</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Request Full PDF Report</a>
                     </div>
-                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase;">Community Outreach</span>
-                    <h3 style="margin-top: 0.4rem; font-size: 1.25rem;">Youth Leadership & Mentorship</h3>
-                    <p style="font-size: 0.9rem;">Life skills, career guidance, and academic motivation sessions delivered to high school youth in Hammarsdale.</p>
-                    <ul style="font-size: 0.85rem; padding-left: 1rem; margin-bottom: 1rem;">
-                        <li>✔ Partnered with local schools</li>
-                        <li>✔ Mentorship follow-ups</li>
-                    </ul>
-                    <a href="contact.html" class="btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Request Full PDF Report</a>
                 </div>
 
             </div>
@@ -241,5 +220,5 @@
 
     <script src="script.js"></script>
 </body>
-                            </html>
-        
+        </html>
+    
