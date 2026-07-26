@@ -1,80 +1,57 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Navbar Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+/* ==========================================
+   Animated Counter
+========================================== */
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+const counters = document.querySelectorAll('.counter');
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        });
-    });
+const startCounter = (counter) => {
 
-    // 2. Formspree AJAX Submission Handler
-    const handleFormSubmit = (formId, submitBtnId, successMessage) => {
-        const form = document.getElementById(formId);
-        const submitBtn = document.getElementById(submitBtnId);
+    const target = +counter.dataset.target;
 
-        if (!form) return;
+    let count = 0;
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const originalBtnText = submitBtn.textContent;
-            
-            // Disable button & show sending state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+    const speed = target / 80;
 
-            const formData = new FormData(form);
+    const update = () => {
 
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+        count += speed;
 
-                if (response.ok) {
-                    alert(successMessage);
-                    form.reset();
-                } else {
-                    const data = await response.json();
-                    if (data && data.errors) {
-                        alert(data.errors.map(error => error.message).join(", "));
-                    } else {
-                        alert("Oops! There was a problem submitting your form.");
-                    }
-                }
-            } catch (error) {
-                alert("Network error. Please check your connection and try again.");
-            } finally {
-                submitBtn.disabled = true;
-                submitBtn.textContent = originalBtnText;
-            }
-        });
+        if (count < target) {
+
+            counter.innerText = Math.floor(count);
+
+            requestAnimationFrame(update);
+
+        } else {
+
+            counter.innerText = target + "+";
+
+        }
+
     };
 
-    // Initialize Form Handlers
-    handleFormSubmit(
-        'contactForm', 
-        'contactSubmitBtn', 
-        'Thank you for reaching out to NCEP! We have received your message and will respond shortly.'
-    );
+    update();
 
-    handleFormSubmit(
-        'ikhayaForm', 
-        'ikhayaSubmitBtn', 
-        'Application received! Thank you for registering for the iKhaya Golden Mic initiative.'
-    );
+};
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            startCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
 });
-        
+
+counters.forEach(counter=>{
+
+    observer.observe(counter);
+
+});
